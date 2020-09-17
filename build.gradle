@@ -10,10 +10,21 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+	jcenter()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	implementation 'com.h2database:h2:1.4.197'
+
+	implementation('org.flywaydb:flyway-maven-plugin:4.0.3') {
+		exclude group: 'org.slf4j'
+	}
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

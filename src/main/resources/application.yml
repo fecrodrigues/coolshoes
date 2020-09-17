@@ -2,3 +2,21 @@ server:
   port: 8082
   error:
     include-message: always
+
+fiap:
+  debug: true
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+
+spring:
+  datasource:
+    url: jdbc:h2:C:/h2db/fiapcoolshoesdb;DB_CLOSE_ON_EXIT=true
+    username: fiap
+    password: fiap
+  jpa:
+    show-sql: true
+
+
